@@ -1,97 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AIVenture Labs - Pioneering AI Innovation</title>
-    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
-        <nav class="nav">
-            <div class="logo">
+    <header class="bg-gray-900 text-white py-4">
+        <nav class="container mx-auto flex justify-between items-center px-4">
+            <div class="text-xl font-bold">
                 AIVenture Labs
             </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <ul class="hidden md:flex space-x-4">
+                <li><a href="#home" class="hover:text-gray-300">Home</a></li>
+                <li><a href="#about" class="hover:text-gray-300">About</a></li>
+                <li><a href="#services" class="hover:text-gray-300">Services</a></li>
+                <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
             </ul>
-            <button class="mobile-menu-btn" id="mobile-menu-button">☰</button>
+            <button class="md:hidden text-white" id="mobile-menu-button">☰</button>
         </nav>
         <!-- Mobile menu -->
-        <div class="mobile-menu" id="mobile-menu">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
+        <div class="md:hidden bg-gray-800 text-white" id="mobile-menu">
+            <a href="#home" class="block py-2 px-4 hover:bg-gray-700">Home</a>
+            <a href="#about" class="block py-2 px-4 hover:bg-gray-700">About</a>
+            <a href="#services" class="block py-2 px-4 hover:bg-gray-700">Services</a>
+            <a href="#contact" class="block py-2 px-4 hover:bg-gray-700">Contact</a>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <h1>AIVenture Labs</h1>
-            <p>Pioneering the future of artificial intelligence through innovative research, development, and cutting-edge solutions.</p>
-            <div class="btn-group">
-                <button class="btn btn-primary">Get Started</button>
-                <button class="btn btn-secondary">Learn More</button>
+    <section id="home" class="bg-gray-800 text-white py-20">
+        <div class="container mx-auto text-center px-4">
+            <h1 class="text-4xl font-bold mb-4">Transform Your Business with AI-Powered SaaS Solutions</h1>
+            <p class="text-xl mb-8">At AIVENTURE LABS, we revolutionize SaaS solutions with cutting-edge AI integration. Our expert team combines advanced machine learning algorithms with functional programming excellence to deliver scalable, efficient, and intelligent software that drives your business forward.</p>
+            <div class="space-x-4">
+                <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded">Get Started</button>
+                <button class="bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded">Learn More</button>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">About AIVenture Labs</h2>
-            <p class="section-subtitle">
-                We are at the forefront of AI innovation, dedicated to creating intelligent solutions that transform industries and improve lives.
-            </p>
-            <div class="grid grid-2">
+    <section id="about" class="bg-gray-900 text-white py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">About AIVenture Labs</h2>
+            <p class="text-lg text-center mb-12">AIVENTURE LABS LLC was founded with a clear mission: to bridge the gap between traditional SaaS solutions and the limitless potential of artificial intelligence. Our team of seasoned developers, data scientists, and technology strategists work together to create intelligent software that solves real business problems. With expertise in Scala, ZIO, and functional programming paradigms, we build resilient, scalable systems that stand the test of time.</p>
+            <div class="grid md:grid-cols-2 gap-8">
                 <div>
-                    <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem;">Our Mission</h3>
-                    <p style="color: #6b7280; margin-bottom: 1.5rem;">
-                        To democratize artificial intelligence and make it accessible to businesses and individuals worldwide. We believe AI should augment human capabilities and create positive impact across all sectors.
-                    </p>
-                    <ul class="features-list">
-                        <li>
-                            <svg fill="currentColor" viewBox="0 0 20 20">
+                    <h3 class="text-2xl font-semibold mb-4">Why Choose AIVENTURE LABS?</h3>
+                    <p class="text-gray-300 mb-6">What sets us apart is our unique combination of AI expertise and functional programming excellence. While many consultancies focus on either AI or software development, we bring both worlds together to create truly intelligent, robust applications. Our team stays at the cutting edge of technology while maintaining a practical focus on delivering business value through stable, maintainable solutions.</p>
+                    <h3 class="text-2xl font-semibold mb-4">Our Technology Stack</h3>
+                    <p class="text-gray-300 mb-6">We specialize in building scalable, maintainable systems using modern technology stacks. Our core expertise includes Scala, ZIO, Cats Effect, Akka, and other functional programming libraries. For AI development, we leverage PyTorch, TensorFlow, scikit-learn, and custom ML pipelines. Our cloud infrastructure expertise spans AWS, Google Cloud, and Azure, ensuring your solutions are scalable, secure, and cost-effective.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            Cutting-edge AI research and development
+                            AI Expertise
                         </li>
-                        <li>
-                            <svg fill="currentColor" viewBox="0 0 20 20">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            Ethical AI practices and transparency
+                            Functional Programming Excellence
                         </li>
-                        <li>
-                            <svg fill="currentColor" viewBox="0 0 20 20">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            Collaborative innovation ecosystem
+                            SaaS Solutions
                         </li>
                     </ul>
                 </div>
-                <div class="stats">
-                    <div class="stat-item">
-                        <h4>100+</h4>
-                        <p>AI Models</p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-gray-800 p-4 rounded text-center">
+                        <h4 class="text-2xl font-bold text-blue-400">100+</h4>
+                        <p class="text-gray-300">AI Models</p>
                     </div>
-                    <div class="stat-item">
-                        <h4>50+</h4>
-                        <p>Clients</p>
+                    <div class="bg-gray-800 p-4 rounded text-center">
+                        <h4 class="text-2xl font-bold text-blue-400">50+</h4>
+                        <p class="text-gray-300">Clients</p>
                     </div>
-                    <div class="stat-item">
-                        <h4>5+</h4>
-                        <p>Years</p>
+                    <div class="bg-gray-800 p-4 rounded text-center">
+                        <h4 class="text-2xl font-bold text-blue-400">5+</h4>
+                        <p class="text-gray-300">Years</p>
                     </div>
-                    <div class="stat-item">
-                        <h4>24/7</h4>
-                        <p>Support</p>
+                    <div class="bg-gray-800 p-4 rounded text-center">
+                        <h4 class="text-2xl font-bold text-blue-400">24/7</h4>
+                        <p class="text-gray-300">Support</p>
                     </div>
                 </div>
             </div>
@@ -99,54 +102,67 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="section section-alt">
-        <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <p class="section-subtitle">
-                Comprehensive AI solutions tailored to your business needs, from research to deployment.
-            </p>
-            <div class="grid grid-3">
-                <div class="card">
-                    <div class="card-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <section id="services" class="bg-gray-800 text-white py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Our Services</h2>
+            <p class="text-lg text-center mb-12">Comprehensive AI solutions tailored to your business needs, from research to deployment.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gray-700 p-6 rounded-lg">
+                    <div class="mb-4">
+                        <svg class="w-12 h-12 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
                         </svg>
                     </div>
-                    <h3>AI Research & Development</h3>
-                    <p>Custom AI model development, algorithm optimization, and cutting-edge research to solve complex business challenges.</p>
-                    <a href="#" class="card-link">
+                    <h3 class="text-xl font-semibold mb-2">AI Integration Services</h3>
+                    <p class="text-gray-300 mb-4">Our AI Integration services help businesses embed intelligent features into existing software or build new AI-powered solutions from the ground up. We specialize in natural language processing, predictive analytics, recommendation systems, and computer vision to create applications that learn, adapt, and deliver exceptional value to your customers.</p>
+                    <a href="#" class="text-blue-400 hover:text-blue-300 flex items-center">
                         Learn more
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                         </svg>
                     </a>
                 </div>
-                <div class="card">
-                    <div class="card-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="bg-gray-700 p-6 rounded-lg">
+                    <div class="mb-4">
+                        <svg class="w-12 h-12 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
                         </svg>
                     </div>
-                    <h3>Machine Learning Consulting</h3>
-                    <p>Strategic guidance on ML implementation, data strategy, and AI transformation for enterprise organizations.</p>
-                    <a href="#" class="card-link">
+                    <h3 class="text-xl font-semibold mb-2">Fractional CTO Services</h3>
+                    <p class="text-gray-300 mb-4">Access executive-level technology leadership without the full-time cost. Our Fractional CTO service provides strategic guidance, technical roadmapping, architecture planning, and team leadership to help your business make informed technology decisions. We bridge the gap between business objectives and technical implementation to ensure your technology investments deliver maximum ROI.</p>
+                    <a href="#" class="text-blue-400 hover:text-blue-300 flex items-center">
                         Learn more
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                         </svg>
                     </a>
                 </div>
-                <div class="card">
-                    <div class="card-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="bg-gray-700 p-6 rounded-lg">
+                    <div class="mb-4">
+                        <svg class="w-12 h-12 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                         </svg>
                     </div>
-                    <h3>AI Integration & Deployment</h3>
-                    <p>Seamless integration of AI solutions into existing systems with scalable deployment and ongoing support.</p>
-                    <a href="#" class="card-link">
+                    <h3 class="text-xl font-semibold mb-2">ZIO Consultancy</h3>
+                    <p class="text-gray-300 mb-4">Harness the power of ZIO to build highly concurrent, resilient applications. Our ZIO consultancy services help teams adopt this powerful Scala library for effect management, resulting in code that's easier to test, maintain, and reason about. We offer training, implementation support, and codebase modernization to help you leverage ZIO's full potential.</p>
+                    <a href="#" class="text-blue-400 hover:text-blue-300 flex items-center">
                         Learn more
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-lg">
+                    <div class="mb-4">
+                        <svg class="w-12 h-12 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Scala and Functional Programming</h3>
+                    <p class="text-gray-300 mb-4">Functional programming delivers cleaner, more maintainable code with fewer bugs. Our Scala consultancy services help teams adopt functional programming practices, refactor legacy codebases, and build new applications using FP principles. From basic training to advanced techniques, we'll help your team leverage the full power of Scala and functional programming.</p>
+                    <a href="#" class="text-blue-400 hover:text-blue-300 flex items-center">
+                        Learn more
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                         </svg>
                     </a>
@@ -155,34 +171,40 @@
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section id="faq" class="bg-gray-800 text-white py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+            <p class="text-lg text-center mb-12">Find answers to common questions about our services, technology approach, and engagement models. Learn about AI integration timelines, the benefits of functional programming, how our Fractional CTO service works, and more.</p>
+        </div>
+    </section>
+
     <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title">Get in Touch</h2>
-            <p class="section-subtitle">
-                Ready to transform your business with AI? Let's discuss how we can help you achieve your goals.
-            </p>
-            <div class="form-container">
-                <form>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" id="name" name="name" class="form-input">
+    <section id="contact" class="bg-gray-900 text-white py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Get in Touch</h2>
+            <p class="text-lg text-center mb-12">Ready to transform your business with AI-powered solutions? Our team is eager to learn about your challenges and opportunities. Reach out today to schedule a consultation, request a proposal, or simply learn more about how we can help your organization leverage the power of AI and functional programming.</p>
+            <div class="max-w-md mx-auto">
+                <form class="space-y-4">
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label for="name" class="block text-sm font-medium mb-1">Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:border-blue-500">
                         </div>
-                        <div class="form-group">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" id="email" name="email" class="form-input">
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-1">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:border-blue-500">
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="subject" class="form-label">Subject</label>
-                        <input type="text" id="subject" name="subject" class="form-input">
+                    <div>
+                        <label for="subject" class="block text-sm font-medium mb-1">Subject</label>
+                        <input type="text" id="subject" name="subject" class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:border-blue-500">
                     </div>
-                    <div class="form-group">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea id="message" name="message" class="form-input form-textarea"></textarea>
+                    <div>
+                        <label for="message" class="block text-sm font-medium mb-1">Message</label>
+                        <textarea id="message" name="message" rows="4" class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:border-blue-500"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded">Send Message</button>
                 </form>
             </div>
         </div>
@@ -225,14 +247,14 @@
                 <div class="footer-section">
                     <h4>Contact</h4>
                     <ul class="footer-links">
-                        <li>1.aiventure-labs.online</li>
+                        <li>contact@aiventure-labs.online</li>
                         <li>contact@aiventure-labs.online</li>
                         <li>+1 (555) 123-4567</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 AIVenture Labs. All rights reserved.</p>
+                <p>&copy; 2025 AIVenture Labs. All rights reserved.</p>
             </div>
         </div>
     </footer>
